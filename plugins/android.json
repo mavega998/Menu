@@ -9,18 +9,6 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "co.com.evotics.menu"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "co.com.evotics.menu"
-        },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "co.com.evotics.menu"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "co.com.evotics.menu"
-        },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "co.com.evotics.menu"
         }
     },
     "dependent_plugins": {}
