@@ -2,154 +2,197 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=yes" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=yes" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
 
-    
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript">
-        document.addEventListener('backbutton', function(e) {
-            if ($.mobile.activePage.is('#pedidoH')) {
-                e.preventDefault();
-            } else {
-                if (confirm("¿Esta seguro que desea salir?")) {
-                    this.finish();
-                } else {
-                    return false;
-                }
-            }
-        }, false);
-    </script>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 
-    <title></title>
+
+
+  <script type="text/javascript">
+    document.addEventListener('backbutton', function(e) {
+      if ($.mobile.activePage.is('#pedidoH')) {
+        e.preventDefault();
+      } else {
+        if (confirm("¿Esta seguro que desea salir?")) {
+          this.finish();
+        } else {
+          return false;
+        }
+      }
+    }, false);
+  </script>
+
+  <title></title>
 </head>
 
 <body>
-    <div data-role="page" id="home">
-        <div data-role="header">
-            <h1 id="jungla">PIZSENA</h1>
-        </div>
-        <div role="main" class="ui-content">
-            <a href="#create" class="ui-btn ui-shadow ui-corner-all ui-btn-inline pull-left"><img src="../img/pizza-ani.gif"><br>Create Your Pizza</a>
-            <a href="#buy" class="ui-btn ui-shadow ui-corner-all ui-btn-inline pull-right"><img src="../img/pizza-ani.gif"><br>Buy Your Pizza</a>
-        </div>
-        <div data-role="footer" data-position="fixed">
-            <h4>SENA - 2016</h4>
-        </div>
+  <div data-role="page" id="home">
+    <div data-role="header">
+      <h1 id="jungla">PIZSENA</h1>
     </div>
-    <div data-role="page" id="create">
-        <div data-role="header">
-            <h1 id="jungla">PIZSENA</h1>
-        </div>
-        <div data-role="content">
-            <form>
-             <legend>Salsa:</legend>
-              <label>
-                <input type="checkbox" value="0">Tomate
-              </label>
-              <label>
-                <input type="checkbox" value="1">Bechamel
-              </label>
-             <legend>Ingredientes:</legend>
-            <div class="pull-left">
-              <label>
-                <input type="checkbox" value="0">Anchoas
-              </label>
-              <label>
-                <input type="checkbox" value="1">Cebolla
-              </label>
-              <label>
-                <input type="checkbox" value="2">Champiñón
-              </label>
-              <label>
-                <input type="checkbox" value="3">Jamón
-              </label>
-              <label>
-                <input type="checkbox" value="4">Maíz
-              </label>
-              <label>
-                <input type="checkbox" value="5">Pepperoni
-              </label>
-              <label>
-                <input type="checkbox" value="6">Pimiento-Rojo
-              </label>
-              <label>
-                <input type="checkbox" value="7">Pimiento-Verde
-              </label>
-              <label>
-                <input type="checkbox" value="8">Piña
-              </label>
-              <label>
-                <input type="checkbox" value="9">Pollo
-              </label>
-              <label>
-                <input type="checkbox" value="10">Queso
-              </label>
-              <label>
-                <input type="checkbox" value="11">Salami
-              </label>
-              <label>
-                <input type="checkbox" value="12">Tocineta
-              </label>
-              <label>
-                <input type="checkbox" value="13">Tomate
-              </label>
-            </div>
-            <div class="pull-right"><img src="../img/pizza-1.png"></div>
-            </form>
-        </div>
-        <label for="text-basic">Nombre:</label>
-                <input type="text" name="text-basic" id="text-basic" value="">
-                 <button class="ui-btn">Enviar</button>
-        <div data-role="footer" data-position="fixed">
-            <h4>SENA - 2016</h4>
-        </div>
+    <div role="main" class="ui-content">
+      <a href="#create" class="ui-btn ui-shadow ui-corner-all ui-btn-inline pull-left"><img src="../img/pizza-ani.gif"><br>Crea tu Pizza</a>
+      <a href="#buy" class="ui-btn ui-shadow ui-corner-all ui-btn-inline pull-right"><img src="../img/pizza-ani.gif"><br>Compra tu Pizza</a>
     </div>
-    <div data-role="page" id="buy">
-        <div data-role="header">
-            <h1 id="jungla">PIZSENA</h1>
-        </div>
-        <div data-role="content">
-         <form  data-iconpos="right">
-            <legend>Pizza:</legend>
-              <label>
-                <input type="checkbox" name="checkbox-0 ">Pizza
-              </label>
-              <label>
-                <input type="checkbox" name="checkbox-0 ">Pizza
-              </label>
-              <label>
-                <input type="checkbox" name="checkbox-0 ">Pizza
-              </label>
-              <label>
-                <input type="checkbox" name="checkbox-0 ">Pizza
-              </label>
-              <label>
-                <input type="checkbox" name="checkbox-0 ">Pizza
-              </label>
-              <label>
-                <input type="checkbox" name="checkbox-0 ">Pizza
-              </label>
-         </form>
-        </div>
-        <div data-role="footer" data-position="fixed">
-            <h4>SENA - 2016</h4>
-        </div>
+  </div>
+
+  <div data-role="page" id="create">
+    <div data-role="header">
+      <h1 id="jungla">PIZSENA</h1>
     </div>
+    <div data-role="content">
+      <h2>Crea tu Pizza</h2>
+      <form id="form1">
+        <legend>Elije tu salsa:</legend>
+        <label><input type="radio" id="salsa" name="salsa" value="0">Tomate</label>
+        <label><input type="radio" id="salsa" name="salsa" value="1">Bechamel</label>
+        
+        <legend>Elije tus ingredientes:</legend>
+        <div class="pull-left">
+        <label>
+          <input type="checkbox" name="ingredients[]" value="1" id="ingredientes">Anchoas
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="2" id="ingredientes">Cebolla
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="3" id="ingredientes">Champiñón
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="4" id="ingredientes">Jamón
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="5" id="ingredientes">Maíz
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="6" id="ingredientes">Pepperoni
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="7" id="ingredientes">Pimiento-Rojo
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="8" id="ingredientes">Pimiento-Verde
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="9" id="ingredientes">Piña
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="10" id="ingredientes">Pollo
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="11" id="ingredientes">Queso
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="12" id="ingredientes">Salami
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="13" id="ingredientes">Tocineta
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="14" id="ingredientes">Tomate
+        </label>
+      </div>
+      <div class="pull-right"><img src="../img/pizza-1.png"></div>
+    </form>
+  </div>
+  <label for="text-basic">Nombre:</label>
+  <input type="text" name="text-basic" id="name" value="">
+  <button class="ui-btn" onclick="enviar();">Enviar</button>
+</div>
+
+<div data-role="page" id="buy">
+  <div data-role="header">
+    <h1 id="jungla">PIZSENA</h1>
+  </div>
+  <div data-role="content">
+   <form  data-iconpos="right" id="form2">
+    <legend>Elije tu pizza:</legend>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Pollo con Champiñones
+    </label>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Jamon y Queso
+    </label>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Ranchera
+    </label>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Hawaiana
+    </label>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Napolitana
+    </label>
+  </form>
+</div>
+</div>
+
+<script type="text/javascript">
+  function enviar() {
+    //captur los valores
+    var salsa = $('input:radio[name=salsa]:checked').val();
+    var ingredientes = "";
+    var nombre = $('#name').val();
+
+    $('input[name="ingredients[]"]:checked').each(function(){
+      ingredientes += $(this).val()+",";
+    });
+    ingredientes = ingredientes.substring(0,ingredientes.length-1);
+
+    archivoValidacion = "http://192.168.100.4/servidor/guarda.php?jsoncallback=?";
+    $.getJSON(archivoValidacion,{name:nombre,salsa:salsa,ingredientes:ingredientes}).done(function(respuestaServer){
+      var rta = respuestaServer.respuesta;
+      var datos = rta.split(":");
+      alert(datos[0]);
+      if(respuestaServer.validacion == "ok"){
+        $.mobile.changePage("#pay");
+        bloquear();
+      }else{
+        alert(respuestaServer.validacion);
+      }
+    });
+    return false;
+  }
+
+  function bloquear() {
+    $(".ui-checkbox").addClass("ui-state-disabled");
+    $(".ui-radio").addClass("ui-state-disabled");
+    $(".ui-input-text").addClass("ui-state-disabled");
+  }
+
+  function desbloquear() {
+    $(".ui-checkbox").removeClass("ui-state-disabled");
+    $(".ui-radio").removeClass("ui-state-disabled");
+    $(".ui-input-text").removeClass("ui-state-disabled");
+  }
+</script>
+
+<div data-role="page" id="pay">
+  <div data-role="header">
+    <h1 id="jungla">PIZSENA</h1>
+  </div>
+  <div data-role="content">
+    <form>
+      <p>
+
+      </p>
+      <button class="ui-btn">Pedir</button>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
