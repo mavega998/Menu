@@ -4,7 +4,7 @@
     <description>Hello World sample application that responds to the deviceready event.</description>
     <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
     <content src="index.html" />
-    <access origin="http://192.168.0.11/" />
+    <access origin="http://192.168.100.39/" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -20,20 +20,20 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <platform name="android">
-        <icon src="www/images/launch-icons/36.png" density="ldpi" />
-        <icon src="www/images/launch-icons/48.png" density="mdpi" />
-        <icon src="www/images/launch-icons/72.png" density="hdpi" />
-        <icon src="www/images/launch-icons/96.png" density="xhdpi" />
+        <icon src="www/icon.png" density="ldpi" />
+        <icon src="www/icon.png" density="mdpi" />
+        <icon src="www/icon.png" density="hdpi" />
+        <icon src="www/icon.png" density="xhdpi" />
 
-        <splash src="www/images/launch-icons/spscreen-land-hdpi.png" density="land-hdpi"/>
-        <splash src="www/images/launch-icons/spscreen-land-ldpi.png" density="land-ldpi"/>
-        <splash src="www/images/launch-icons/spscreen-land-mdpi.png" density="land-mdpi"/>
-        <splash src="www/images/launch-icons/spscreen-land-xhdpi.png" density="land-xhdpi"/>
+        <splash src="www/icon.png" density="land-hdpi"/>
+        <splash src="www/icon.png" density="land-ldpi"/>
+        <splash src="www/icon.png" density="land-mdpi"/>
+        <splash src="www/icon.png" density="land-xhdpi"/>
 
-        <splash src="www/images/launch-icons/spscreen-hdpi.png" density="port-hdpi"/>
-        <splash src="www/images/launch-icons/spscreen-ldpi.png" density="port-ldpi"/>
-        <splash src="www/images/launch-icons/spscreen-mdpi.png" density="port-mdpi"/>
-        <splash src="www/images/launch-icons/spscreen-xhdpi.png" density="port-xhdpi"/>
+        <splash src="www/icon.png" density="port-hdpi"/>
+        <splash src="www/icon.png" density="port-ldpi"/>
+        <splash src="www/icon.png" density="port-mdpi"/>
+        <splash src="www/icon.png" density="port-xhdpi"/>
 
         <preference name="Fullscreen" value="true" />
     </platform>

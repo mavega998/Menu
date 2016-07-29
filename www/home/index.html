@@ -58,55 +58,70 @@
       <h2>Crea tu Pizza</h2>
       <form id="form1">
         <legend>Elije tu salsa:</legend>
-        <label><input type="radio" id="salsa" name="salsa" value="0">Tomate</label>
-        <label><input type="radio" id="salsa" name="salsa" value="1">Bechamel</label>
+        <label><input type="radio" id="check14" id="salsa" name="salsa" value="0" onchange="javascript:showContent14()">Tomate</label>
+        <label><input type="radio"  id="check14" id="salsa" name="salsa" value="1" onchange="javascript:showContent14()">Bechamel</label>
         
         <legend>Elije tus ingredientes:</legend>
         <div class="pull-left">
         <label>
-          <input type="checkbox" name="ingredients[]" value="1" id="ingredientes">Anchoas
+          <input type="checkbox" name="ingredients[]" value="1" id="check" id="ingredientes" onchange="javascript:showContent()">Anchoas
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="2" id="ingredientes">Cebolla
+          <input type="checkbox" name="ingredients[]" value="2" id="check1" id="ingredientes"onchange="javascript:showContent1()">Cebolla
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="3" id="ingredientes">Champiñón
+          <input type="checkbox" name="ingredients[]" value="3" id="check2" id="ingredientes"onchange="javascript:showContent2()">Champiñón
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="4" id="ingredientes">Jamón
+          <input type="checkbox" name="ingredients[]" value="4" id="check3" id="ingredientes"onchange="javascript:showContent3()">Jamón
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="5" id="ingredientes">Maíz
+          <input type="checkbox" name="ingredients[]" value="5" id="check4" id="ingredientes"onchange="javascript:showContent4()">Maíz
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="6" id="ingredientes">Pepperoni
+          <input type="checkbox" name="ingredients[]" value="6" id="check5" id="ingredientes"onchange="javascript:showContent5()">Pepperoni
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="7" id="ingredientes">Pimiento-Rojo
+          <input type="checkbox" name="ingredients[]" value="7" id="check6" id="ingredientes"onchange="javascript:showContent6()">Pimiento-Rojo
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="8" id="ingredientes">Pimiento-Verde
+          <input type="checkbox" name="ingredients[]" value="8" id="check7" id="ingredientes" onchange="javascript:showContent7()">Pimiento-Verde
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="9" id="ingredientes">Piña
+          <input type="checkbox" name="ingredients[]" value="9" id="check8" id="ingredientes" onchange="javascript:showContent8()">Piña
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="10" id="ingredientes">Pollo
+          <input type="checkbox" name="ingredients[]" value="10" id="check9" id="ingredientes" onchange="javascript:showContent9()">Pollo
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="11" id="ingredientes">Queso
+          <input type="checkbox" name="ingredients[]" value="11" id="check10" id="ingredientes" onchange="javascript:showContent10()">Queso
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="12" id="ingredientes">Salami
+          <input type="checkbox" name="ingredients[]" value="12" id="check11" id="ingredientes" onchange="javascript:showContent11()">Salami
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="13" id="ingredientes">Tocineta
+          <input type="checkbox" name="ingredients[]" value="13" id="check12" id="ingredientes" onchange="javascript:showContent12()">Tocineta
         </label>
         <label>
-          <input type="checkbox" name="ingredients[]" value="14" id="ingredientes">Tomate
+          <input type="checkbox" name="ingredients[]" value="14" id="check13" id="ingredientes" onchange="javascript:showContent13()">Tomate
         </label>
       </div>
-      <div class="pull-right"><img src="../img/pizza-1.png"></div>
+      <div id="content15" style="position: absolute; left:60%; " ><img src="../img/15.png"></div>
+      <div id="content14" style="position: absolute; left:60%; " ><img src="../img/16.png"></div>
+      <div  id="content" style="display: none; position: absolute; left:60%;"><img src="../img/2.png"></div>
+      <div  id="content1" style="display: none; position: absolute; left:60%;"><img src="../img/3.png"></div>
+      <div  id="content2" style="display: none; position: absolute; left:60%;"><img src="../img/4.png"></div>
+      <div  id="content3" style="display: none; position: absolute; left:60%;"><img src="../img/11.png"></div>
+      <div  id="content4" style="display: none; position: absolute; left:60%;"><img src="../img/7.png"></div>
+      <div  id="content5" style="display: none; position: absolute; left:60%;"><img src="../img/6.png"></div>
+      <div  id="content6" style="display: none; position: absolute; left:60%;"><img src="../img/5.png"></div>
+      <div  id="content7" style="display: none; position: absolute; left:60%;"><img src="../img/1.png"></div>
+      <div  id="content8" style="display: none; position: absolute; left:60%;"><img src="../img/8.png"></div>
+      <div  id="content9" style="display: none; position: absolute; left:60%;"><img src="../img/12.png"></div>
+      <div  id="content10" style="display: none; position: absolute; left:60%;"><img src="../img/14.png"></div>
+      <div  id="content11" style="display: none; position: absolute; left:60%;"><img src="../img/13.png"></div>
+      <div  id="content12" style="display: none; position: absolute; left:60%;"><img src="../img/9.png"></div>
+      <div  id="content13" style="display: none; position: absolute; left:60%;"><img src="../img/10.png"></div>
     </form>
   </div>
   <label for="text-basic">Nombre:</label>
@@ -152,7 +167,7 @@
     });
     ingredientes = ingredientes.substring(0,ingredientes.length-1);
 
-    archivoValidacion = "http://192.168.100.4/servidor/guarda.php?jsoncallback=?";
+    archivoValidacion = "http://192.168.100.11/servidor/guarda.php?jsoncallback=?";
     $.getJSON(archivoValidacion,{name:nombre,salsa:salsa,ingredientes:ingredientes}).done(function(respuestaServer){
       var rta = respuestaServer.respuesta;
       var datos = rta.split(":");
@@ -193,6 +208,167 @@
     </form>
   </div>
 </div>
-
+<script>
+   function showContent() {
+        element = document.getElementById("content");
+        check = document.getElementById("check");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent1() {
+        element = document.getElementById("content1");
+        check = document.getElementById("check1");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent2() {
+        element = document.getElementById("content2");
+        check = document.getElementById("check2");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent3() {
+        element = document.getElementById("content3");
+        check = document.getElementById("check3");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent4() {
+        element = document.getElementById("content4");
+        check = document.getElementById("check4");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent5() {
+        element = document.getElementById("content5");
+        check = document.getElementById("check5");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent6() {
+        element = document.getElementById("content6");
+        check = document.getElementById("check6");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent7() {
+        element = document.getElementById("content7");
+        check = document.getElementById("check7");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent8() {
+        element = document.getElementById("content8");
+        check = document.getElementById("check8");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent9() {
+        element = document.getElementById("content9");
+        check = document.getElementById("check9");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }    
+    function showContent10() {
+        element = document.getElementById("content10");
+        check = document.getElementById("check10");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }    
+    function showContent11() {
+        element = document.getElementById("content11");
+        check = document.getElementById("check11");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }    
+    function showContent12() {
+        element = document.getElementById("content12");
+        check = document.getElementById("check12");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }    
+    function showContent13() {
+        element = document.getElementById("content13");
+        check = document.getElementById("check13");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent14() {
+        element = document.getElementById("content14");
+        check = document.getElementById("check14");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+        function showContent15() {
+        element = document.getElementById("content15");
+        check = document.getElementById("check15");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+</script>
 </body>
 </html>
