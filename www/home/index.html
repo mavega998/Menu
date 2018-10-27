@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=yes" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+  <script type="text/javascript">
+    document.addEventListener('backbutton', function(e) {
+      if ($.mobile.activePage.is('#pedidoH')) {
+        e.preventDefault();
+      } else {
+        if (confirm("¿Esta seguro que desea salir?")) {
+          this.finish();
+        } else {
+          return false;
+        }
+      }
+    }, false);
+  </script>
+
+  <title></title>
+</head>
+
+<body>
+  <div data-role="page" id="home">
+    <div data-role="header">
+      <h1 id="jungla">PIZSENA</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <a href="#create" class="ui-btn ui-shadow ui-corner-all ui-btn-inline pull-left"><img src="../img/pizza-ani.gif"><br>Crea tu Pizza</a>
+      <a href="#buy" class="ui-btn ui-shadow ui-corner-all ui-btn-inline pull-right"><img src="../img/pizza-ani.gif"><br>Compra tu Pizza</a>
+    </div>
+  </div>
+
+  <div data-role="page" id="create">
+    <div data-role="header">
+      <h1 id="jungla">PIZSENA</h1>
+    </div>
+    <div data-role="content">
+      <h2>Crea tu Pizza</h2>
+      <form id="form1">
+        <legend>Elije tu salsa:</legend>
+        <label><input type="radio" id="check14" id="salsa" name="salsa" value="0" onchange="javascript:showContent14()">Tomate</label>
+        <label><input type="radio"  id="check14" id="salsa" name="salsa" value="1" onchange="javascript:showContent14()">Bechamel</label>
+        
+        <legend>Elije tus ingredientes:</legend>
+        <div class="pull-left">
+        <label>
+          <input type="checkbox" name="ingredients[]" value="1" id="check" id="ingredientes" onchange="javascript:showContent()">Anchoas
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="2" id="check1" id="ingredientes"onchange="javascript:showContent1()">Cebolla
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="3" id="check2" id="ingredientes"onchange="javascript:showContent2()">Champiñón
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="4" id="check3" id="ingredientes"onchange="javascript:showContent3()">Jamón
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="5" id="check4" id="ingredientes"onchange="javascript:showContent4()">Maíz
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="6" id="check5" id="ingredientes"onchange="javascript:showContent5()">Pepperoni
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="7" id="check6" id="ingredientes"onchange="javascript:showContent6()">Pimiento-Rojo
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="8" id="check7" id="ingredientes" onchange="javascript:showContent7()">Pimiento-Verde
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="9" id="check8" id="ingredientes" onchange="javascript:showContent8()">Piña
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="10" id="check9" id="ingredientes" onchange="javascript:showContent9()">Pollo
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="11" id="check10" id="ingredientes" onchange="javascript:showContent10()">Queso
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="12" id="check11" id="ingredientes" onchange="javascript:showContent11()">Salami
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="13" id="check12" id="ingredientes" onchange="javascript:showContent12()">Tocineta
+        </label>
+        <label>
+          <input type="checkbox" name="ingredients[]" value="14" id="check13" id="ingredientes" onchange="javascript:showContent13()">Tomate
+        </label>
+      </div>
+      <div id="content15" style="position: absolute; left:60%; " ><img src="../img/15.png"></div>
+      <div id="content14" style="position: absolute; left:60%; " ><img src="../img/16.png"></div>
+      <div  id="content" style="display: none; position: absolute; left:60%;"><img src="../img/2.png"></div>
+      <div  id="content1" style="display: none; position: absolute; left:60%;"><img src="../img/3.png"></div>
+      <div  id="content2" style="display: none; position: absolute; left:60%;"><img src="../img/4.png"></div>
+      <div  id="content3" style="display: none; position: absolute; left:60%;"><img src="../img/11.png"></div>
+      <div  id="content4" style="display: none; position: absolute; left:60%;"><img src="../img/7.png"></div>
+      <div  id="content5" style="display: none; position: absolute; left:60%;"><img src="../img/6.png"></div>
+      <div  id="content6" style="display: none; position: absolute; left:60%;"><img src="../img/5.png"></div>
+      <div  id="content7" style="display: none; position: absolute; left:60%;"><img src="../img/1.png"></div>
+      <div  id="content8" style="display: none; position: absolute; left:60%;"><img src="../img/8.png"></div>
+      <div  id="content9" style="display: none; position: absolute; left:60%;"><img src="../img/12.png"></div>
+      <div  id="content10" style="display: none; position: absolute; left:60%;"><img src="../img/14.png"></div>
+      <div  id="content11" style="display: none; position: absolute; left:60%;"><img src="../img/13.png"></div>
+      <div  id="content12" style="display: none; position: absolute; left:60%;"><img src="../img/9.png"></div>
+      <div  id="content13" style="display: none; position: absolute; left:60%;"><img src="../img/10.png"></div>
+    </form>
+  </div>
+  <label for="text-basic">Nombre:</label>
+  <input type="text" name="text-basic" id="name" value="">
+  <button class="ui-btn" onclick="enviar();">Enviar</button>
+</div>
+
+<div data-role="page" id="buy">
+  <div data-role="header">
+    <h1 id="jungla">PIZSENA</h1>
+  </div>
+  <div data-role="content">
+   <form  data-iconpos="right" id="form2">
+    <legend>Elije tu pizza:</legend>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Pollo con Champiñones
+    </label>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Jamon y Queso
+    </label>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Ranchera
+    </label>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Hawaiana
+    </label>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox">Napolitana
+    </label>
+  </form>
+</div>
+</div>
+
+<script type="text/javascript">
+  function enviar() {
+    //captur los valores
+    var salsa = $('input:radio[name=salsa]:checked').val();
+    var ingredientes = "";
+    var nombre = $('#name').val();
+
+    $('input[name="ingredients[]"]:checked').each(function(){
+      ingredientes += $(this).val()+",";
+    });
+    ingredientes = ingredientes.substring(0,ingredientes.length-1);
+
+    archivoValidacion = "http://192.168.100.11/servidor/guarda.php?jsoncallback=?";
+    $.getJSON(archivoValidacion,{name:nombre,salsa:salsa,ingredientes:ingredientes}).done(function(respuestaServer){
+      var rta = respuestaServer.respuesta;
+      var datos = rta.split(":");
+      alert(datos[0]);
+      if(respuestaServer.validacion == "ok"){
+        $.mobile.changePage("#pay");
+        bloquear();
+      }else{
+        alert(respuestaServer.validacion);
+      }
+    });
+    return false;
+  }
+
+  function bloquear() {
+    $(".ui-checkbox").addClass("ui-state-disabled");
+    $(".ui-radio").addClass("ui-state-disabled");
+    $(".ui-input-text").addClass("ui-state-disabled");
+  }
+
+  function desbloquear() {
+    $(".ui-checkbox").removeClass("ui-state-disabled");
+    $(".ui-radio").removeClass("ui-state-disabled");
+    $(".ui-input-text").removeClass("ui-state-disabled");
+  }
+</script>
+
+<div data-role="page" id="pay">
+  <div data-role="header">
+    <h1 id="jungla">PIZSENA</h1>
+  </div>
+  <div data-role="content">
+    <form>
+      <p>
+
+      </p>
+      <button class="ui-btn">Pedir</button>
+    </form>
+  </div>
+</div>
+<script>
+   function showContent() {
+        element = document.getElementById("content");
+        check = document.getElementById("check");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent1() {
+        element = document.getElementById("content1");
+        check = document.getElementById("check1");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent2() {
+        element = document.getElementById("content2");
+        check = document.getElementById("check2");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent3() {
+        element = document.getElementById("content3");
+        check = document.getElementById("check3");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent4() {
+        element = document.getElementById("content4");
+        check = document.getElementById("check4");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent5() {
+        element = document.getElementById("content5");
+        check = document.getElementById("check5");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent6() {
+        element = document.getElementById("content6");
+        check = document.getElementById("check6");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent7() {
+        element = document.getElementById("content7");
+        check = document.getElementById("check7");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent8() {
+        element = document.getElementById("content8");
+        check = document.getElementById("check8");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent9() {
+        element = document.getElementById("content9");
+        check = document.getElementById("check9");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }    
+    function showContent10() {
+        element = document.getElementById("content10");
+        check = document.getElementById("check10");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }    
+    function showContent11() {
+        element = document.getElementById("content11");
+        check = document.getElementById("check11");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }    
+    function showContent12() {
+        element = document.getElementById("content12");
+        check = document.getElementById("check12");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }    
+    function showContent13() {
+        element = document.getElementById("content13");
+        check = document.getElementById("check13");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+    function showContent14() {
+        element = document.getElementById("content14");
+        check = document.getElementById("check14");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+        function showContent15() {
+        element = document.getElementById("content15");
+        check = document.getElementById("check15");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+</script>
+</body>
+</html>

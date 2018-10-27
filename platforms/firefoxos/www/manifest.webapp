@@ -3,13 +3,16 @@
     "installs_allowed_from": [
         "*"
     ],
-    "version": "0.0.1",
+    "version": "1.0.0",
     "name": "Menu",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "description": "Hello World sample application that responds to the deviceready event.",
     "developer": {
-        "name": "Apache Cordova Team",
-        "url": "http://cordova.io"
+        "name": "PhoneGap Team",
+        "url": "http://phonegap.com"
     },
+    "orientation": [
+        "landscape"
+    ],
     "permissions": {
         "systemXHR": {}
     },

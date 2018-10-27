@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.com.evotics.menu" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="co.com.evotics.menu" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <platform name="firefoxos">
         <icon height="128" src="icon/icon-128.png" width="128" />
         <icon height="60" src="icon/icon-60.png" width="60" />
     </platform>
-    <preference name="AndroidPersistentFileLocation" value="Internal" />
     <permission name="systemXHR" privileged="true" />
     <feature name="Notification">
         <param name="firefoxos-package" value="Notification" />
@@ -13,18 +12,16 @@
         <param name="firefoxos-package" value="Camera" />
     </feature>
     <name>Menu</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event.
-    </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
-    </author>
+    <description>Hello World sample application that responds to the deviceready event.</description>
+    <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="http://192.168.100.39/" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <preference name="Orientation" value="landscape" />
 </widget>
